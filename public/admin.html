@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AD</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,600,400,700&f[]=supreme@800,400,200,100,300,101,500,201,700&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+          font-family: 'General Sans', sans-serif;
+  font-family: 'Supreme', sans-serif;
+        }
+      </style>
+
+</head>
+<body>
+
+    <button onclick="showAddForm()">Add Product</button>
+    <div id="add-form" style="display:none;">
+        <h2>Add New Product</h2>
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="text" id="productDescription" placeholder="Product Description">
+        <input type="text" id="productLink" placeholder="Product Link">
+        <input type="text" id="productImage" placeholder="Image URL">
+        <button onclick="addProduct()">Add</button>
+    </div>
+
+     <br>
+     <br>
+
+    
+    <h1>Product List</h1>
+    <div id="product-list"></div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

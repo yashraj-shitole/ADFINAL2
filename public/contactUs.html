@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,600,400,700&f[]=supreme@800,400,200,100,300,101,500,201,700&display=swap" rel="stylesheet">
+
+
+
+    <style>
+      *{
+        font-family: 'General Sans', sans-serif;
+font-family: 'Supreme', sans-serif;
+      }
+    </style>
+
+
+
+</head>
+<body>
+    
+  <header class="sticky top-0 z-30 w-full  px-2 py-4 bg-white sm:px-4">
+    <div class="flex items-center gap-x-3 justify-between mx-auto max-w-7xl">
+      <a href="/" class="w-80 flex items-center">
+          <img src="logo.png" alt="">
+      </a>
+      <div class="flex items-center space-x-5">
+        <div class="hidden space-x-1 gap-x-3 md:inline-flex">
+          <a href="index.html" class="btn btn-sm btn-link">Home</a>
+          <a href="aboutUs.html" class="btn btn-sm btn-link">About Us</a>
+          <a href="services.html" class="btn btn-sm btn-link">Services</a>
+          <a href="products.html" class="btn btn-sm btn-link">Products</a>
+        </div>
+        <a href="contactUs.html" class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Contact</a>
+        <div class="inline-flex md:hidden" x-data="{ open: false }">
+          <button class="flex-none px-2 btn btn-link btn-sm" @click="open = true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              class="w-5 h-5"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span class="sr-only">Open Menu</span>
+          </button>
+          <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow" x-show.transition="open" @click.away="open = false" x-cloak>
+            <button class="self-end flex-none px-2 ml-2 btn btn-link btn-icon" @click="open = false">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              <span class="sr-only">Close Menu</span>
+            </button>
+            <a href="/index.html" class="btn btn-sm btn-link">Home</a>
+          <a href="/aboutUs.html" class="btn btn-sm btn-link">About Us</a>
+          <a href="/services.html" class="btn btn-sm btn-link">Services</a>
+          <a href="/products.html" class="btn btn-sm btn-link">Products</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+      
+ 
+
+
+
+
+      <!-- contact us -->
+      <section class="text-gray-600 body-font relative">
+        <div class="absolute inset-0 bg-gray-300">
+          <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.3819802964895!2d74.47692987596672!3d16.707782022025782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11ded0475eadb%3A0x79f3c5079c954ace!2sSharad%20Institute%20of%20Technology%20College%20of%20Engineering%2C%20Ichalkaranji%20(Kolhapur)!5e0!3m2!1sen!2sin!4v1696746436181!5m2!1sen!2sin" style="filter: grayscale(0.5) contrast(1) opacity(0.5);"></iframe>
+
+
+        </div>
+        <div class="container px-5 py-24 mx-auto flex">
+          <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Contact us</h2>
+            <div class="relative mb-4">
+              <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+              <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+              <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+              <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+            </div>
+            <button class="text-white bg-black border-2 py-2 border-black px-6 focus:outline-none hover:bg-white hover:text-black rounded text-lg">Send</button>
+            <div class="flex m-4 my-8 gap-8 justify-center">
+              <!-- Facebook -->
+                <a href="#"><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-7 w-7"
+                  fill="currentColor"
+                  style="color: #1877f2"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg></a>
+                  
+                  <a href="#"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7"
+                    fill="currentColor"
+                    style="color: #c13584"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg></a>
+                  
+                  <a href="#"> <!-- Linkedin -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7"
+                    fill="currentColor"
+                    style="color: #0077b5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                  </svg></a>
+                  
+                 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+     <!-- Footer -->
+     <footer class="px-4 py-20 text-white bg-black">
+      <div class="mx-auto max-w-7xl flex items-center justify-evenly">
+        <div class="w-full flex flex-wrap flex-row justify-evenly  gap-2 md:flex-row">
+          <nav class="mb-8">
+            <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">AnuDeep Industries</p>
+            <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Phone-1234567890</a>
+            <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Email-anudeepindustries@gmail.com</a>
+            
+          </nav>
+          <nav class="mb-8">
+            <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">Links</p>
+            <a href="/index.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Home</a>
+            <a href="/aboutUs.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">About</a>
+            <a href="/services.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Services</a>
+            <a href="/products.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Products</a>
+          </nav>
+          <nav class="mb-8">
+            <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">Contact</p>
+            <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Facebook</a>
+            <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Instagram</a>
+            <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">LinkedIn</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+      
+      
+      
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+
+
+</body>
+</html>

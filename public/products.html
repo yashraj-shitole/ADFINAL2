@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AD</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@300,600,400,700&f[]=supreme@800,400,200,100,300,101,500,201,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <style>
+      *{
+        font-family: 'General Sans', sans-serif;
+font-family: 'Supreme', sans-serif;
+      }
+    </style>
+</head>
+<body style="background-color: #f9fafb;">
+
+    
+    <header class="sticky top-0 z-30 w-full  px-2 py-4 bg-white sm:px-4">
+        <div class="flex items-center gap-x-3 justify-between mx-auto max-w-7xl">
+          <a href="/" class="w-80 flex items-center">
+              <img src="logo.png" alt="">
+
+          </a>
+          <div class="flex items-center space-x-5">
+            <div class="hidden space-x-1 gap-x-3 md:inline-flex">
+              <a href="index.html" class="btn btn-sm btn-link">Home</a>
+              <a href="aboutUs.html" class="btn btn-sm btn-link">About Us</a>
+              <a href="services.html" class="btn btn-sm btn-link">Services</a>
+              <a href="products.html" class="btn btn-sm btn-link">Products</a>
+            </div>
+            <a href="contactUs.html" class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Contact</a>
+            <div class="inline-flex md:hidden" x-data="{ open: false }">
+              <button class="flex-none px-2 btn btn-link btn-sm" @click="open = true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  class="w-5 h-5"
+                >
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span class="sr-only">Open Menu</span>
+              </button>
+              <div class="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow" x-show.transition="open" @click.away="open = false" x-cloak>
+                <button class="self-end flex-none px-2 ml-2 btn btn-link btn-icon" @click="open = false">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                  <span class="sr-only">Close Menu</span>
+                </button>
+                <a href="/index.html" class="btn btn-sm btn-link">Home</a>
+              <a href="/aboutUs.html" class="btn btn-sm btn-link">About Us</a>
+              <a href="/services.html" class="btn btn-sm btn-link">Services</a>
+              <a href="/products.html" class="btn btn-sm btn-link">Products</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+
+
+      <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+        <div id="product-list"></div>
+      </div>
+      
+
+
+    
+      <!-- Footer -->
+      <footer class="px-4 py-20 text-white bg-black">
+        <div class="mx-auto max-w-7xl flex items-center justify-evenly">
+          <div class="w-full flex flex-wrap flex-row justify-evenly  gap-2 md:flex-row">
+            <nav class="mb-8">
+              <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">AnuDeep Industries</p>
+              <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Phone-1234567890</a>
+              <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Email-anudeepindustries@gmail.com</a>
+              
+            </nav>
+            <nav class="mb-8">
+              <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">Links</p>
+              <a href="/index.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Home</a>
+              <a href="/aboutUs.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">About</a>
+              <a href="/services.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Services</a>
+              <a href="/products.html" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Products</a>
+            </nav>
+            <nav class="mb-8">
+              <p class="mb-3 text-xs font-bold tracking-wider text-gray-500 uppercase">Contact</p>
+              <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Facebook</a>
+              <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">Instagram</a>
+              <a href="#" class="flex mb-3 text-sm font-medium transition md:mb-2 hover:text-primary">LinkedIn</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+
+    <script src="products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+
+</body>
+</html>

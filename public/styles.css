@@ -1,0 +1,73 @@
+/* styles.css */
+
+/* Style for the product card container */
+
+#product-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:stretch;
+
+}
+.product-card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px; /* Increased padding for a more modern look */
+    background-color: #f7f7f7; /* Light background color */
+    border: 1px solid #e0e0e0; /* Softer border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    display: flex; /* Flex layout for better alignment */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center contents horizontally */
+}
+
+/* Style for the product image */
+.product-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Style for product name */
+.product-name {
+    font-size: 20px; /* Slightly larger font size */
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center; /* Center-align text */
+}
+
+/* Style for product description */
+.product-description {
+    font-size: 16px; /* Slightly larger font size */
+    margin-top: 10px;
+    text-align: center; /* Center-align text */
+}
+
+/* Style for product link */
+.product-link {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center; /* Center-align text */
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+/* Style for delete button */
+.delete-button {
+    background-color: #ff5b5b;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Increased padding for a larger button */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block; /* Prevents button from stretching */
+    text-align: center; /* Center-align text in the button */
+    transition: background-color 0.3s; /* Smooth color transition on hover */
+
+    /* Hover effect */
+    &:hover {
+        background-color: #ff3333; /* Darker red on hover */
+    }
+}
